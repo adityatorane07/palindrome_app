@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title> palindrome app by aditya </title>
+		<style>
+			*{font-size:50px;}
+			body {background-color:auzre;}
+		</style>
+	</head>
+	<body>
+	<center>
+		<h1> palindrome checker </h1>
+		<form onsubmit="check()">
+			<input type="text"   	placeholder="enter string"	id="str"/>
+			<br/><br/>
+			<input type="submit"	value="check"/>
+		</form>
+			<h2 id="msg"/>
+		
+		<script>
+			function check()
+			{
+				event.preventDefault();
+				let str=document.getElementById("str");
+				let msg=document.getElementById("msg");
+			
+				if (str.value==="")
+				{
+					alert("please enter string");
+					msg.innerHTML="";
+					str.focus();
+					return;
+				}
+				
+				let s=str.value;
+				let r=s.split("").reverse().join("");
+				let a="";
+
+				if (s===r)
+					a="yes its a palindrone";
+				else
+					a="nope its not a palindrome";
+				msg.innerHTML=a;
+			}
+		</script>
+	</center>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
